@@ -1,0 +1,11 @@
+
+<div class="users">
+    <button (click)="usersFacade.loadUsers()">Load Users</button>
+
+    <div *ngFor="let user of usersFacade.$selectUsers | async">
+        first Name: {{ user.firstName }}
+        last Name: {{ user.lastName }}
+        email: {{ user.email }}
+        <hr />
+    </div>
+</div>
